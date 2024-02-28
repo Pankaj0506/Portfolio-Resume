@@ -43,10 +43,10 @@
       // Get form data
       window.VWO = window.VWO || [];
       window.VWO.push(['nls.formAnalysis.markSuccess', document.querySelector('div') , true]);
-      var firstName = document.getElementByName("fname").value;
-      var lastName = document.getElementById("lname").value;
-      var email = document.getElementById("email").value;
-      var mobile = document.getElementById("mobile").value;
+      var firstName = document.getElementsByName("fname").value;
+      var lastName = document.getElementsByName("lname").value;
+      var email = document.getElementsByName("email").value;
+      var mobile = document.getElementsByName("mobile").value;
     
       // Here you can perform validation or any other operations with the form data
     
@@ -59,10 +59,10 @@
       // You can also send the data to a server using AJAX if needed
     
       // Clear the input fields after submission (optional)
-      document.getElementByName("fname").value = "";
-      document.getElementById("lname").value = "";
-      document.getElementById("email").value = "";
-      document.getElementById("mobile").value = "";
+      document.getElementsByName("fname").value = "";
+      document.getElementsByName("lname").value = "";
+      document.getElementsByName("email").value = "";
+      document.getElementsByName("mobile").value = "";
     }
   </script>
 
