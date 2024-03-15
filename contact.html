@@ -56,6 +56,12 @@
 </div>
 
 <script>
+
+    window.VWO = window.VWO || [];
+	VWO.event = VWO.event || function () {VWO.push(["event"].concat([].slice.call(arguments)))};
+
+	VWO.event("dynamicForm");
+    
     document.getElementById('show-form-btn').addEventListener('click', function() {
         // Create form element
         var form = document.createElement('form');
