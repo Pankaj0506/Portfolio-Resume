@@ -16,53 +16,83 @@
     <!-- End VWO Async SmartCode -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simple Form Without Form Tag</title>
+  <title>Dynamic Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        text-align: center;
+        margin-top: 50px;
+    }
+    #insert-form {
+        display: none;
+    }
+    form {
+        margin-top: 20px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-
-  <h2>Simple Form Without Form Tag</h2>
-  
-  <div id="test">
-    <label for="fname">First Name:</label>
-    <input type="text" nls_fa_el_name="fname" name="fname"><br><br>
-  
-    <label for="lname">Last Name:</label>
-    <input type="text" nls_fa_el_name="lname" name="lname"><br><br>
-  
-    <label for="email">Email:</label>
-    <input type="email" nls_fa_el_name="email" name="email"><br><br>
-  
-    <label for="mobile">Mobile:</label>
-    <input type="tel" nls_fa_el_name="mobile" name="mobile"><br><br>
-  
-    <button onclick="submitForm()">Submit</button>
+  <div class="container">
+      <button id="show-form-btn">Show Form</button>
+      <div id="insert-form">
+          <form id="myForm">
+              <input type="text" name="name" placeholder="Your Name" required><br>
+              <input type="email" name="email" placeholder="Your Email" required><br>
+              <input type="number" name="age" placeholder="Your Age" required><br>
+              <input type="tel" name="mobile" placeholder="Your Mobile Number" required><br>
+              <textarea name="message" placeholder="Your Message" required></textarea><br>
+              <input type="submit" value="Submit">
+          </form>
+      </div>
   </div>
-  
   <script>
     function submitForm() {
       // Get form data
       window.VWO = window.VWO || [];
       window.VWO.push(['nls.formAnalysis.markSuccess', document.querySelector('div') , true]);
-      var firstName = document.getElementsByName("fname").value;
-      var lastName = document.getElementsByName("lname").value;
-      var email = document.getElementsByName("email").value;
-      var mobile = document.getElementsByName("mobile").value;
     
-      // Here you can perform validation or any other operations with the form data
-    
-      // For demonstration, let's just log the data
-      console.log("First Name:", firstName);
-      console.log("Last Name:", lastName);
-      console.log("Email:", email);
-      console.log("Mobile:", mobile);
-    
-      // You can also send the data to a server using AJAX if needed
-    
-      // Clear the input fields after submission (optional)
-      document.getElementsByName("fname").value = "";
-      document.getElementsByName("lname").value = "";
-      document.getElementsByName("email").value = "";
-      document.getElementsByName("mobile").value = "";
+      document.getElementById('show-form-btn').addEventListener('click', function() {
+          document.getElementById('insert-form').style.display = 'block';
+          this.style.display = 'none';
+      });
+
+      document.getElementById('myForm').addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent the default form submission
+  
+          // Get form data
+          var formData = new FormData(this);
+          
+          // Do something with the form data (For now, let's just log it)
+          for (var pair of formData.entries()) {
+              console.log(pair[0] + ': ' + pair[1]);
+          }
+          
+          // You can send the form data to a server using AJAX or any other method here
+          
+          // Optional: Reset the form after submission
+          this.reset();
+      });
     }
   </script>
 
