@@ -53,7 +53,6 @@
     </style>
 </head>
 <body>
-  <div class="container">
       <button id="show-form-btn">Show Form</button>
       <div id="insert-form">
           <form id="myForm">
@@ -65,12 +64,10 @@
               <input type="submit" value="Submit">
           </form>
       </div>
-  </div>
   <script>
     
       document.getElementById('show-form-btn').addEventListener('click', function() {
           document.getElementById('insert-form').style.display = 'block';
-          this.style.display = 'none';
       });
 
       document.getElementById('myForm').addEventListener('submit', function(event) {
