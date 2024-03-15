@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Start VWO Async SmartCode -->
+    <!-- Start VWO Async SmartCode -->
     <link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com" />
     <script type='text/javascript' id='vwoCode'>
     window._vwo_code || (function() {
@@ -15,79 +15,87 @@
     </script>
     <!-- End VWO Async SmartCode -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Form</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            text-align: center;
-            margin-top: 50px;
-        }
-        #insert-form {
-            display: none;
-        }
-        form {
-            margin-top: 20px;
-        }
-        input[type="text"],
-        input[type="email"],
-        input[type="number"],
-        input[type="tel"],
-        textarea {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-        }
-    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Form</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        text-align: center;
+        margin-top: 50px;
+    }
+    form {
+        margin-top: 20px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    input[type="tel"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+    }
+</style>
 </head>
 <body>
-      <button id="show-form-btn">Show Form</button>
-      <div id="insert-form">
-          <form id="myForm">
-              <input type="text" name="name" placeholder="Your Name" required><br>
-              <input type="email" name="email" placeholder="Your Email" required><br>
-              <input type="number" name="age" placeholder="Your Age" required><br>
-              <input type="tel" name="mobile" placeholder="Your Mobile Number" required><br>
-              <textarea name="message" placeholder="Your Message" required></textarea><br>
-              <input type="submit" value="Submit">
-          </form>
-      </div>
-  <script>
-    
-      document.getElementById('show-form-btn').addEventListener('click', function() {
-          document.getElementById('insert-form').style.display = 'block';
-      });
 
-      document.getElementById('myForm').addEventListener('submit', function(event) {
-          event.preventDefault(); // Prevent the default form submission
-  
-          // Get form data
-          var formData = new FormData(this);
-          
-          // Do something with the form data (For now, let's just log it)
-          for (var pair of formData.entries()) {
-              console.log(pair[0] + ': ' + pair[1]);
-          }
-          
-          // You can send the form data to a server using AJAX or any other method here
-          
-          // Optional: Reset the form after submission
-          this.reset();
-      });
-    }
-  </script>
+<div class="container">
+    <button id="show-form-btn">Show Form</button>
+</div>
+
+<script>
+    document.getElementById('show-form-btn').addEventListener('click', function() {
+        // Create form element
+        var form = document.createElement('form');
+        form.id = 'myForm';
+        form.innerHTML = `
+            <input type="text" name="name" placeholder="Your Name" required><br>
+            <input type="email" name="email" placeholder="Your Email" required><br>
+            <input type="number" name="age" placeholder="Your Age" required><br>
+            <input type="tel" name="mobile" placeholder="Your Mobile Number" required><br>
+            <textarea name="message" placeholder="Your Message" required></textarea><br>
+            <input type="submit" value="Submit">
+        `;
+        
+        // Append form to the container
+        document.querySelector('.container').appendChild(form);
+        
+        // Hide the button after the form is shown
+        this.style.display = 'none';
+    });
+
+    document.addEventListener('submit', function(event) {
+        // Check if the submitted form is the dynamically created form
+        if (event.target.id === 'myForm') {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form data
+            var formData = new FormData(event.target);
+
+            // Do something with the form data (For now, let's just log it)
+            for (var pair of formData.entries()) {
+                console.log(pair[0] + ': ' + pair[1]);
+            }
+
+            // You can send the form data to a server using AJAX or any other method here
+
+            // Optional: Reset the form after submission
+            event.target.reset();
+        }
+    });
+</script>
 
 </body>
 </html>
