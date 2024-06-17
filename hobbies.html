@@ -17,7 +17,105 @@
   <!-- End VWO Async SmartCode -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HTML Tags with Alternate Text</title>
+  <title>HTML Tags with Alternate Text</title><style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .demo_hero_marketo-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .marketo_embed-wrapper {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .mktoFormRow {
+      margin-bottom: 15px;
+    }
+
+    .mktoFieldWrap input,
+    .mktoFieldWrap select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .mktoLabel {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .mktoButtonRow {
+      text-align: center;
+    }
+
+    .mktoButton {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .mktoButton:hover {
+      background-color: #0056b3;
+    }
+
+    .terms-text {
+      text-align: center;
+      font-size: 0.9em;
+    }
+
+    .group-6 {
+      margin-top: 50px;
+      display: flex;
+      justify-content: space-around;
+    }
+
+    .subject {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .figure-title {
+      margin-bottom: 10px;
+    }
+
+    .number {
+      display: flex;
+      align-items: center;
+    }
+
+    .number input {
+      width: 50px;
+      text-align: center;
+      margin: 0 10px;
+    }
+
+    .number .plus,
+    .number .minus {
+      cursor: pointer;
+    }
+  </style>
 </head>
 
 <body>
@@ -26,7 +124,7 @@
     <div class="marketo_embed-wrapper">
       <div class="marketo_embed w-embed w-script">
         <script src="//munchkin.marketo.net/munchkin.js"></script>
-        <form id="marketo-form-0" data-button-text="Get demo" class="marketo-form landing-page-form white-fields marketo-demo-form mktoForm mktoHasWidth mktoLayoutLeft" data-load-from-parameters="1" data-onload-callback="addTermsHtml" data-success-callback="submitAndRedirectToDemo_cpfix" data-track="Demo form submission" novalidate="novalidate" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(51, 51, 51); width: 2546px;" __bizdiag="-612393230" __biza="WJ__">
+        <form id="marketo-form-0" data-button-text="Get demo" class="marketo-form landing-page-form white-fields marketo-demo-form mktoForm mktoHasWidth mktoLayoutLeft" data-load-from-parameters="1" data-onload-callback="addTermsHtml" data-success-callback="submitAndRedirectToDemo_cpfix" data-track="Demo form submission" novalidate="novalidate" style="font-family: Helvetica, Arial, sans-serif; font-size: 13px; color: rgb(51, 51, 51);" __bizdiag="-612393230" __biza="WJ__">
           <style type="text/css">
             .mktoForm .mktoButtonWrap.mktoSimple .mktoButton {
               color: #fff;
@@ -104,50 +202,8 @@
           <div class="mktoFormRow">
             <div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;">
               <div class="mktoOffset" style="width: 10px;"></div>
-              <div class="mktoFieldWrap mktoRequiredField"><label for="Company_0" id="LblCompany" class="mktoLabel mktoHasWidth" style="width: 100px;">
-                  <div class="mktoAsterix">*</div>Company name
-                </label>
-                <div class="mktoGutter mktoHasWidth" style="width: 10px;"></div><input id="Company_0" name="Company" maxlength="255" aria-labelledby="LblCompany InstructCompany" type="text" class="mktoField mktoTextField mktoHasWidth mktoRequired" aria-required="true" style="width: 150px;"><span id="InstructCompany" tabindex="-1" class="mktoInstruction"></span>
-                <div class="mktoClear"></div>
-              </div>
-              <div class="mktoClear"></div>
-            </div>
-            <div class="mktoClear"></div>
-          </div>
-          <div class="mktoFormRow"><input type="hidden" name="InferredCountry" class="mktoField mktoFieldDescriptor mktoFormCol" value="United States" style="margin-bottom: 10px;">
-            <div class="mktoClear"></div>
-          </div>
-          <div class="mktoFormRow"><input type="hidden" name="utm_campaign__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;">
-            <div class="mktoClear"></div>
-          </div>
-          <div class="mktoFormRow"><input type="hidden" name="utm_content__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;">
-            <div class="mktoClear"></div>
-          </div>
-          <div class="mktoFormRow"><input type="hidden" name="utm_medium__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;">
-            <div class="mktoClear"></div>
-          </div>
-          <div class="mktoFormRow"><input type="hidden" name="utm_term__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;">
-            <div class="mktoClear"></div>
-          </div>
-          <div class="mktoFormRow"><input type="hidden" name="utm_source__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;">
-            <div class="mktoClear"></div>
-          </div>
-          <div class="mktoFormRow"><input type="hidden" name="UTM_Content_Type__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;">
-            <div class="mktoClear"></div>
-          </div>
-          <div class="mktoFormRow"><input type="hidden" name="UTM_Campaign_Type__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;">
-            <div class="mktoClear"></div>
-          </div>
-          <div class="mktoFormRow"><input type="hidden" name="falseLead" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;">
-            <div class="mktoClear"></div>
-          </div>
-          <div class="mktoFormRow">
-            <div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;">
-              <div class="mktoOffset" style="width: 10px;"></div>
-              <div class="mktoFieldWrap"><label for="Phone_0" id="LblPhone" class="mktoLabel mktoHasWidth" style="width: 100px;">
-                  <div class="mktoAsterix">*</div>Phone Number
-                </label>
-                <div class="mktoGutter mktoHasWidth" style="width: 10px;"></div><input id="Phone_0" name="Phone" maxlength="255" aria-labelledby="LblPhone InstructPhone" type="tel" class="mktoField mktoTelField mktoHasWidth" style="width: 150px;"><span id="InstructPhone" tabindex="-1" class="mktoInstruction"></span>
+              <div class="mktoFieldWrap"><label for="Company_0" id="LblCompany" class="mktoLabel mktoHasWidth" style="width: 100px;">Company</label>
+                <div class="mktoGutter mktoHasWidth" style="width: 10px;"></div><input id="Company_0" name="Company" maxlength="255" aria-labelledby="LblCompany InstructCompany" type="text" class="mktoField mktoTextField mktoHasWidth" style="width: 150px;"><span id="InstructCompany" tabindex="-1" class="mktoInstruction"></span>
                 <div class="mktoClear"></div>
               </div>
               <div class="mktoClear"></div>
@@ -157,140 +213,67 @@
           <div class="mktoFormRow">
             <div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;">
               <div class="mktoOffset" style="width: 10px;"></div>
-              <div class="mktoFieldWrap mktoRequiredField"><label for="Employee_Range__c_0" id="LblEmployee_Range__c" class="mktoLabel mktoHasWidth" style="width: 100px;">
-                  <div class="mktoAsterix">*</div>Company size
+              <div class="mktoFieldWrap mktoRequiredField"><label for="Phone_0" id="LblPhone" class="mktoLabel mktoHasWidth" style="width: 100px;">
+                  <div class="mktoAsterix">*</div>Phone
                 </label>
-                <div class="mktoGutter mktoHasWidth" style="width: 10px;"></div><select id="Employee_Range__c_0" name="Employee_Range__c" aria-labelledby="LblEmployee_Range__c InstructEmployee_Range__c" class="mktoField mktoHasWidth mktoRequired" aria-required="true" style="width: 150px;">
-                  <option value="">Select...</option>
-                  <option value="1 - 150 employees">1 - 150 employees</option>
-                  <option value="151 - 500 employees">151 - 500 employees</option>
-                  <option value="501 - 2000 employees">501 - 2000 employees</option>
-                  <option value="2001 - 5000 employees">2001 - 5000 employees</option>
-                  <option value="5001+ employees">5001+ employees</option>
-                </select><span id="InstructEmployee_Range__c" tabindex="-1" class="mktoInstruction"></span>
+                <div class="mktoGutter mktoHasWidth" style="width: 10px;"></div><input id="Phone_0" name="Phone" maxlength="255" aria-labelledby="LblPhone InstructPhone" type="text" class="mktoField mktoTextField mktoHasWidth mktoRequired" aria-required="true" style="width: 150px;"><span id="InstructPhone" tabindex="-1" class="mktoInstruction"></span>
                 <div class="mktoClear"></div>
               </div>
               <div class="mktoClear"></div>
             </div>
             <div class="mktoClear"></div>
           </div>
-          <div class="mktoFormRow">
+          <div class="mktoFormRow mktoCheckboxList">
             <div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;">
               <div class="mktoOffset" style="width: 10px;"></div>
-              <div class="mktoFieldWrap mktoRequiredField"><label for="Title_0" id="LblTitle" class="mktoLabel mktoHasWidth" style="width: 100px;">
-                  <div class="mktoAsterix">*</div>Job title
+              <div class="mktoFieldWrap mktoRequiredField"><label for="LeadSource_0" id="LblLeadSource" class="mktoLabel mktoHasWidth" style="width: 100px;">
+                  <div class="mktoAsterix">*</div>Lead Source
                 </label>
-                <div class="mktoGutter mktoHasWidth" style="width: 10px;"></div><input id="Title_0" name="Title" maxlength="255" aria-labelledby="LblTitle InstructTitle" type="text" class="mktoField mktoTextField mktoHasWidth mktoRequired" aria-required="true" style="width: 150px;"><span id="InstructTitle" tabindex="-1" class="mktoInstruction"></span>
+                <div class="mktoGutter mktoHasWidth" style="width: 10px;"></div><select id="LeadSource_0" name="LeadSource" aria-labelledby="LblLeadSource InstructLeadSource" class="mktoField mktoHasWidth mktoRequired" aria-required="true" style="width: 170px;"><option value=""></option><option value="Referral">Referral</option><option value="Social Media">Social Media</option><option value="Advertisement">Advertisement</option><option value="Other">Other</option></select><span id="InstructLeadSource" tabindex="-1" class="mktoInstruction"></span>
                 <div class="mktoClear"></div>
               </div>
               <div class="mktoClear"></div>
             </div>
             <div class="mktoClear"></div>
           </div>
-          <div class="mktoFormRow"><input type="hidden" name="lt_referrer__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;">
+          <div class="mktoButtonRow">
+            <span class="mktoButtonWrap mktoSimple"><button class="mktoButton" type="submit">Submit</button></span>
             <div class="mktoClear"></div>
           </div>
-          <div class="mktoFormRow"><input type="hidden" name="ft_referrer__c" class="mktoField mktoFieldDescriptor mktoFormCol" value="" style="margin-bottom: 10px;">
-            <div class="mktoClear"></div>
+          <div class="terms-text">
+            By submitting, you agree to our terms of service and privacy policy.
           </div>
-          <div class="mktoFormRow">
-            <div class="mktoFieldDescriptor mktoFormCol" style="margin-bottom: 10px;">
-              <div class="mktoOffset" style="width: 10px;"></div>
-              <div class="mktoFieldWrap mktoRequiredField"><label for="Inbound_Form_Region__c_0" id="LblInbound_Form_Region__c" class="mktoLabel mktoHasWidth" style="width: 100px;">
-                  <div class="mktoAsterix">*</div>Region
-                </label>
-                <div class="mktoGutter mktoHasWidth" style="width: 10px;"></div><select id="Inbound_Form_Region__c_0" name="Inbound_Form_Region__c" aria-labelledby="LblInbound_Form_Region__c InstructInbound_Form_Region__c" class="mktoField mktoHasWidth mktoRequired" aria-required="true" style="width: 150px;">
-                  <option value="">Select...</option>
-                  <option value="North America">North America</option>
-                  <option value="South/Central America">South/Central America</option>
-                  <option value="Europe">Europe</option>
-                  <option value="Africa">Africa</option>
-                  <option value="Asia">Asia</option>
-                  <option value="Middle East">Middle East</option>
-                  <option value="Australia">Australia</option>
-                </select><span id="InstructInbound_Form_Region__c" tabindex="-1" class="mktoInstruction"></span>
-                <div class="mktoClear"></div>
-              </div>
-              <div class="mktoClear"></div>
-            </div>
-            <div class="mktoClear"></div>
-          </div><span class="text-sm text-slate-muted block my-6 terms-text">By submitting this form you agree to our <a class="policy-link" href="/legal/terms-of-service">Terms of Service</a>, <a class="policy-link" href="/legal/privacy-policy">Privacy Policy</a>, and to receive marketing communications from Envoy.</span>
-          <div class="mktoButtonRow"><span class="mktoButtonWrap mktoSimple" style="margin-left: 120px;"><button type="submit" class="mktoButton">Get demo</button></span></div><input type="hidden" name="formid" class="mktoField mktoFieldDescriptor" value="340"><input type="hidden" name="munchkinId" class="mktoField mktoFieldDescriptor" value="510-TEH-674">
         </form>
+      </div>
+    </div>
+  </div>
 
-        <script type="text/javascript">
-          function submitAndRedirectToDemo_cpfix(values, followUpUrl, $form) {
-            const redirectToDemo = function (values, followUpUrl, $form) {
-              localStorage.setItem("email", values["Email"]);
-              location.href = "/demo-videos?email=" + values["Email"];
-          
-              // Return false to prevent the submission handler continuing with its own processing
-              return false;
-            };
-          
-            const track_name = $form.data("track");
-            window.metrics?.trackEvent(track_name);
-            ChiliPiper.submit("envoy", "inbound-router", {
-              formId: $form.attr( 'id' ),
-              onError: function () {
-                redirectToDemo(values, followUpUrl, $form);
-              },
-              onSuccess: function () {
-                redirectToDemo(values, followUpUrl, $form);
-              },
-              onClose: function () {
-                redirectToDemo(values, followUpUrl, $form);
-              },
-            });
-            localStorage.setItem("email", values["Email"]);
-            //location.href = "/demo-videos";
-            return false;
-          }
-        </script>
+  <div class="group-6">
+    <div class="subject">
+      <h3 class="figure-title">Subject 1</h3>
+      <div class="number">
+        <div class="minus">-</div>
+        <input type="text" value="0" readonly>
+        <div class="plus">+</div>
+      </div>
+    </div>
+    <div class="subject">
+      <h3 class="figure-title">Subject 2</h3>
+      <div class="number">
+        <div class="minus">-</div>
+        <input type="text" value="0" readonly>
+        <div class="plus">+</div>
+      </div>
+    </div>
+    <div class="subject">
+      <h3 class="figure-title">Subject 3</h3>
+      <div class="number">
+        <div class="minus">-</div>
+        <input type="text" value="0" readonly>
+        <div class="plus">+</div>
       </div>
     </div>
   </div>
-  <div class="group-6 group-figures">
-    <div class="subject">
-      <span class="figure-title">Adults</span>
-      <div class="number">
-        <span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
-        <input name="adults" type="number" value="2" class="quantity" min="0">
-        <span class="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
-      </div>
-    </div>
-    <div class="subject">
-      <span class="figure-title">Children</span>
-      <div class="number">
-        <span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
-        <input name="children" type="number" value="1" class="quantity" min="0">
-        <span class="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
-      </div>
-    </div>
-    <div class="subject">
-      <span class="figure-title">Pets</span>
-      <div class="number">
-        <span class="minus"><i class="fa fa-minus" aria-hidden="true"></i></span>
-        <input name="pets" type="number" value="0" class="quantity" min="0">
-        <span class="plus"><i class="fa fa-plus" aria-hidden="true"></i></span>
-      </div>
-    </div>
-  </div>
-  <script>
-    document.getElementById('personalDetailForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Prevents the default form submission
-        var name = document.getElementById('name').value;
-        var email = document.getElementById('email').value;
-        var message = document.getElementById('message').value;
-      
-        // Displaying the entered details in an alert
-        alert("Name: " + name + "\nEmail: " + email + "\nMessage: " + message);
-      
-        // You can also perform additional actions like sending the form data to a server using AJAX
-        // Example:
-        // sendDataToServer(name, email, message);
-    });
-  </script>
 </body>
 
 </html>
